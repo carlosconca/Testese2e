@@ -1,7 +1,7 @@
 //exemplo de criar comando para efetuar login
 Cypress.Commands.add('login', (nome, senha) => {
     cy.get('input[formcontrolname="userName"]').type(nome);
-    cy.get('input[formcontrolname="password"]').type(senha);
+    cy.get('input[formcontrolname="password"]').type(senha, {false: false});
     cy.get('button[type="submit"]').click();
 })
 
